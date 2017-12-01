@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Test" default="first" basedir=".">
+	<target name="first" description="No Action">
+		<echo>          ********************************************************************** </echo>
+		<echo>                  first                    </echo>
+		<echo>          ********************************************************************** </echo>
+	</target>
+	<target name="second" description="No Action">
+		<echo>          ********************************************************************** </echo>
+		<echo>                  second                    </echo>
+		<echo>          ********************************************************************** </echo>
+	</target>
+</project>
