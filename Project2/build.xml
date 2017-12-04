@@ -7,7 +7,7 @@
 	</target>
 	<target name="second" description="No Action">
 		<echo>          ********************************************************************** </echo>
-		<echo>                  second                    </echo>
+		<echo>                  secondModified                    </echo>
 		<echo>          ********************************************************************** </echo>
 	</target>
 </project>
