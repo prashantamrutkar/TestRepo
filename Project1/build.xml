@@ -2,7 +2,7 @@
 <project name="Test" default="first" basedir=".">
 	<target name="first" description="No Action">
 		<echo>          ********************************************************************** </echo>
-		<echo>                  first                    </echo>
+		<echo>                  firstModified                    </echo>
 		<echo>          ********************************************************************** </echo>
 	</target>
 	<target name="second" description="No Action">
