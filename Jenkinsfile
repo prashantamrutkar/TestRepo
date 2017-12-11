@@ -1,17 +1,15 @@
 pipeline {
     agent any
     environment {
-        PREVIOUS_BUILD_RESULT = 'currentBuild.getPreviousBuild().getResult()'
+        PREVIOUS_BUILD_RESULT = 'currentBuild.getPreviousBuild().getResult().toString()'
     }
-    withEnv(["PREVIOUS_BUILD_RESULT=currentBuild.getPreviousBuild().getResult()"]) {
-      echo '${env.PREVIOUS_BUILD_RESULT}'
-      echo '${PREVIOUS_BUILD_RESULT}'
-      }
 
     stages {
         stage('Build') {
             steps {
-                echo 'Building..'                
+                echo 'Building..'    
+                echo '${env.PREVIOUS_BUILD_RESULT}'
+      echo '${PREVIOUS_BUILD_RESULT}'
             }
         }
         stage('Test') {
