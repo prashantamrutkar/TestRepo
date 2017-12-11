@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        PREVIOUS_BUILD_RESULT = ${currentBuild.getPreviousBuild().getResult()?}
+        PREVIOUS_BUILD_RESULT = currentBuild.getPreviousBuild().getResult()?
     }
 
     stages {
