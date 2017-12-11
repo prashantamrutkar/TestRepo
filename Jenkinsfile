@@ -3,25 +3,26 @@ pipeline {
     environment {
         PREVIOUS_BUILD_RESULT = 'currentBuild.getPreviousBuild().getResult()'
     }
+    withEnv(["PREVIOUS_BUILD_RESULT=currentBuild.getPreviousBuild().getResult()]) {
+      echo '${env.PREVIOUS_BUILD_RESULT}'
+      echo '${PREVIOUS_BUILD_RESULT}'
+      }
+}
 
     stages {
         stage('Build') {
             steps {
-                echo 'Building..'
-                echo 'PREVIOUS_BUILD_RESULT : ${env.PREVIOUS_BUILD_RESULT}'
-                echo '${PREVIOUS_BUILD_RESULT}'
+                echo 'Building..'                
             }
         }
         stage('Test') {
             steps {
                 echo 'Testing..'
-                echo 'PREVIOUS_BUILD_RESULT : ${env.PREVIOUS_BUILD_RESULT}'
             }
         }
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
-                echo 'PREVIOUS_BUILD_RESULT : ${PREVIOUS_BUILD_RESULT}'
             }
         }
     }
