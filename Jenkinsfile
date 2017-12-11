@@ -9,6 +9,7 @@ pipeline {
             steps {
                 echo 'Building..'
                 echo 'PREVIOUS_BUILD_RESULT : ${env.PREVIOUS_BUILD_RESULT}'
+                echo '${PREVIOUS_BUILD_RESULT}'
             }
         }
         stage('Test') {
