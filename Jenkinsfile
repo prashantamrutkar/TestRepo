@@ -7,7 +7,6 @@ pipeline {
       echo '${env.PREVIOUS_BUILD_RESULT}'
       echo '${PREVIOUS_BUILD_RESULT}'
       }
-}
 
     stages {
         stage('Build') {
